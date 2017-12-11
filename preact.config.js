@@ -10,7 +10,7 @@
  **/
 export default function(config, env, helpers) {
   /** you can change config here **/
-  // preactCliLodash(config, {
+  // config = preactCliLodash(config, {
   //   collections: true,
   //   paths: true
   // });
@@ -23,4 +23,5 @@ export default function(config, env, helpers) {
     polyfill: false,
     regenerator: true
   }]);
+  return config;
 }
