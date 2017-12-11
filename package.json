@@ -1,0 +1,35 @@
+{
+  "name": "mobx-preact-starter",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "preact build",
+    "dev": "preact watch",
+    "lint": "eslint src",
+    "serve": "preact build && preact serve",
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "lodash": "^4.17.4",
+    "mobx": "^3.4.1",
+    "mobx-preact": "^1.1.0",
+    "mobx-state-tree": "^1.2.1",
+    "preact": "^8.2.6",
+    "preact-compat": "^3.17.0",
+    "preact-router": "^2.6.0",
+    "window-or-global": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "eslint": "^4.13.0",
+    "eslint-config-synacor": "^2.0.2",
+    "if-env": "^1.0.0",
+    "preact-cli": "^2.1.0",
+    "preact-cli-lodash": "^1.1.0"
+  },
+  "eslintIgnore": [
+    "build/*"
+  ]
+}

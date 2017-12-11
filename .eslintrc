@@ -1,0 +1,10 @@
+{
+  "extends": "eslint-config-synacor",
+  "rules": {
+    "indent": [2, 2, {
+      "SwitchCase": 1
+    }],
+    "lines-around-comment": [0],
+    "react/jsx-indent-props": [2, 2]
+  }
+}
