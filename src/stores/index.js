@@ -12,6 +12,7 @@ export default types.model({
     self.todos.set(id, Todo.create({
       name
     }));
+
     return self.todos;
   })
 }));

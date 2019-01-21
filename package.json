@@ -1,26 +1,26 @@
 {
   "dependencies": {
     "axios": "^0.18.0",
-    "lodash": "latest",
+    "lodash": "^4.17.11",
     "mobx": "^5.8.0",
     "mobx-preact": "^3.0.0",
     "mobx-state-tree": "^3.10.0",
-    "preact": "latest",
-    "preact-compat": "latest",
-    "preact-router": "latest",
+    "preact": "^8.4.2",
+    "preact-compat": "^3.18.4",
+    "preact-router": "^2.6.1",
     "window-or-global": "^1.0.1"
   },
   "devDependencies": {
+    "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "eslint": "^5.12.1",
-    "eslint-config-synacor": "latest",
-    "if-env": "^1.0.4",
+    "eslint-config-synacor": "^3.0.3",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "per-env": "^1.0.2",
     "preact-cli": "^2.2.1",
     "preact-cli-lodash": "^1.1.0"
   },
-  "eslintIgnore": [
-    "build/*"
-  ],
   "license": "MIT",
   "name": "mobx-preact-starter",
   "private": true,
@@ -29,7 +29,9 @@
     "dev": "preact watch",
     "lint": "eslint src",
     "serve": "preact build && preact serve",
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev"
+    "start": "per-env",
+    "start:development": "npm run -s dev",
+    "start:production": "npm run -s serve"
   },
-  "version": "0.0.1"
+  "version": "0.0.0"
 }
