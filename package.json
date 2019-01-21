@@ -1,21 +1,10 @@
 {
-  "name": "mobx-preact-starter",
-  "version": "0.0.1",
-  "private": true,
-  "license": "MIT",
-  "scripts": {
-    "build": "preact build",
-    "dev": "preact watch",
-    "lint": "eslint src",
-    "serve": "preact build && preact serve",
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev"
-  },
   "dependencies": {
     "axios": "^0.18.0",
     "lodash": "latest",
-    "mobx": "^3.6.2",
-    "mobx-preact": "^1.1.0",
-    "mobx-state-tree": "^1.4.0",
+    "mobx": "^5.8.0",
+    "mobx-preact": "^3.0.0",
+    "mobx-state-tree": "^3.10.0",
     "preact": "latest",
     "preact-compat": "latest",
     "preact-router": "latest",
@@ -23,7 +12,7 @@
   },
   "devDependencies": {
     "babel-plugin-transform-runtime": "^6.23.0",
-    "eslint": "^4.19.1",
+    "eslint": "^5.12.1",
     "eslint-config-synacor": "latest",
     "if-env": "^1.0.4",
     "preact-cli": "^2.2.1",
@@ -31,5 +20,16 @@
   },
   "eslintIgnore": [
     "build/*"
-  ]
+  ],
+  "license": "MIT",
+  "name": "mobx-preact-starter",
+  "private": true,
+  "scripts": {
+    "build": "preact build",
+    "dev": "preact watch",
+    "lint": "eslint src",
+    "serve": "preact build && preact serve",
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev"
+  },
+  "version": "0.0.1"
 }

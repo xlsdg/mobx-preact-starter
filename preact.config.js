@@ -1,4 +1,4 @@
-// const preactCliLodash = require('preact-cli-lodash');
+const preactCliLodash = require('preact-cli-lodash');
 
 /**
  * Function that mutates original webpack config.
@@ -10,18 +10,21 @@
  **/
 export default function(config, env, helpers) {
   /** you can change config here **/
-  // config = preactCliLodash(config, {
-  //   collections: true,
-  //   paths: true
-  // });
+  config = preactCliLodash(config, {
+    collections: true,
+    paths: true
+  });
+
   const {
     rule
   } = helpers.getLoadersByName(config, 'babel-loader')[0];
+
   rule.options.plugins.push('transform-regenerator');
   rule.options.plugins.push(['transform-runtime', {
     helpers: false,
     polyfill: false,
     regenerator: true
   }]);
+
   return config;
 }
