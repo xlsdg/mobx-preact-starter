@@ -19,9 +19,11 @@ export default function(config, env, helpers) {
 
   rule.options.plugins.push('transform-regenerator');
   rule.options.plugins.push(['transform-runtime', {
+    corejs: false,
     helpers: false,
     polyfill: false,
-    regenerator: true
+    regenerator: true,
+    useESModules: false
   }]);
 
   return config;
